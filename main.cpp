@@ -1,4 +1,7 @@
 #include <SFML/Graphics.hpp>
+#include "Logic/Random.h"
+#include <memory>
+
 int main()
 {
     sf::RenderWindow ventana(sf::VideoMode(1920, 1080), "WerSkt!");
@@ -16,5 +19,6 @@ int main()
         ventana.draw(circulo);
         ventana.display();
     }
+    Random::getRandom(10);
     return 0;
 }

@@ -3,7 +3,6 @@
 
 class ExampleTestFixture : public ::testing::Test{
 protected:
-    friend class VaccinationSimulation;
 
     virtual void SetUp() {
         num = new double(2);

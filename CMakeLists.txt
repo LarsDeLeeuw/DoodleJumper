@@ -8,9 +8,12 @@ set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake/Modules/")
 # find SFML library:
 find_package(SFML COMPONENTS system graphics window REQUIRED)
 
-add_executable(DoodleJumper main.cpp Game.cpp Game.h Stopwatch.cpp Stopwatch.h Camera.cpp Camera.h Random.cpp Random.h World.cpp World.h BG_Tile.cpp BG_Tile.h Bonus.cpp Bonus.h)
+add_executable(DoodleJumper main.cpp)
 
 target_link_libraries(DoodleJumper
+        logic_lib
         ${SFML_LIBRARIES}
         )
+
+add_subdirectory(Logic)
 add_subdirectory(Google_tests)
