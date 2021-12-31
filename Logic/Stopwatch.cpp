@@ -3,7 +3,7 @@
 
 std::shared_ptr<Stopwatch> Stopwatch::stopwatch_ = nullptr;
 
-std::shared_ptr<Stopwatch> Stopwatch::getStopwatch(int ticks) {
+std::shared_ptr<Stopwatch> Stopwatch::getStopwatch(int ticks = 0) {
     if(stopwatch_ == nullptr){
         std::shared_ptr<Stopwatch> temp(new Stopwatch(ticks));
         stopwatch_ = temp;
