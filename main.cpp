@@ -1,5 +1,6 @@
 #include <SFML/Graphics.hpp>
 #include "Logic/Random.h"
+#include "Logic/Stopwatch.h"
 #include <memory>
 
 int main()
@@ -20,5 +21,6 @@ int main()
         ventana.display();
     }
     Random::getRandom(10);
+    Stopwatch::getStopwatch(0);
     return 0;
 }
